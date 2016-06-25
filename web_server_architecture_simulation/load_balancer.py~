@@ -1,0 +1,21 @@
+#Load Balancer
+#1) Random
+#2) Looping
+#3) Load Based
+
+SERVERS = ["APP1", "APP2", "APP3"]
+
+import itertools
+##Infinite Loop iterator
+cycle = itertools.cycle(SERVERS)
+def getServer():
+    global cycle
+    return cycle.next()   #More memory efficient solution
+
+##TESTER
+if __name__ == "__main__"
+    for i in range(12):
+        print get_server()
+
+
+
